@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Container, Typography, Box } from '@mui/material';
 import { motion } from 'framer-motion';
+import ProjectsPage from './Projects';
 
 const HomePage = () => (
   <motion.div className="home-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -35,19 +36,6 @@ const AboutPage = () => (
       </Typography>
       <Typography variant="body1">
         Краткая информация о себе...
-      </Typography>
-    </Container>
-  </motion.div>
-);
-
-const ProjectsPage = () => (
-  <motion.div className="page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-    <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom>
-        Мои проекты
-      </Typography>
-      <Typography variant="body1">
-        Здесь будут мои проекты...
       </Typography>
     </Container>
   </motion.div>
