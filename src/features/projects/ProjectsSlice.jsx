@@ -1,5 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
-
+import { createSlice } from "@reduxjs/toolkit";
+import PCYBER_image from "../../assets/PCYBER.png";
+import TODO_image from "../../assets/TODO.png";
+import PORTFOLIO_image from "../../assets/PORTFOLIO.png";
+import ELITETRAVEL_image from "../../assets/ELITETRAVEL.png";
 
 const initialState = {
   projects: [
@@ -9,7 +12,8 @@ const initialState = {
       description: "Краткое описание проекта 1",
       github: "https://github.com/username/project1",
       technologies: ["React", "Redux"],
-      date: "2023-01-15"
+      date: "2023-01-15",
+      image: PCYBER_image,
     },
     {
       id: 2,
@@ -17,7 +21,8 @@ const initialState = {
       description: "Краткое описание проекта 2",
       github: "https://github.com/username/project2",
       technologies: ["React", "Tailwind"],
-      date: "2023-02-10"
+      date: "2023-02-10",
+      image: TODO_image,
     },
     {
       id: 3,
@@ -25,7 +30,8 @@ const initialState = {
       description: "Краткое описание проекта 3",
       github: "https://github.com/username/project3",
       technologies: ["React", "Material UI"],
-      date: "2023-03-05"
+      date: "2023-03-05",
+      image: PORTFOLIO_image,
     },
     {
       id: 4,
@@ -33,16 +39,16 @@ const initialState = {
       description: "Краткое описание проекта 4",
       github: "https://github.com/username/project4",
       technologies: ["React", "Chakra UI"],
-      date: "2023-04-01"
+      date: "2023-04-01",
+      image: ELITETRAVEL_image,
     },
-  ]
+  ],
 };
 
 const projectsSlice = createSlice({
-  name: 'projects',
+  name: "projects",
   initialState,
-  reducers: {
-    }
+  reducers: {},
 });
 
 export default projectsSlice.reducer;

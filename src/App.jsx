@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Container, Typography, Box } from '@mui/material';
-import { motion } from 'framer-motion';
-import PortfolioPage from './components/PortfolioPage';
-import ProjectDetailPage from './components/ProjectDetailPage';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Container, Typography, Box } from "@mui/material";
+import { motion } from "framer-motion";
+import PortfolioPage from "./components/PortfolioPage";
+import ProjectDetailPage from "./components/ProjectDetailPage";
+import "./App.css";
 
 const HomePage = () => (
   <motion.div
@@ -50,9 +50,7 @@ const AboutPage = () => (
       <Typography variant="h4" gutterBottom>
         Обо мне
       </Typography>
-      <Typography variant="body1">
-        Краткая информация о себе...
-      </Typography>
+      <Typography variant="body1">Краткая информация о себе...</Typography>
     </Container>
   </motion.div>
 );

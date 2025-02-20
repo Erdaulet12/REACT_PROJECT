@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 
 const PortfolioPage = () => {
@@ -11,14 +12,12 @@ const PortfolioPage = () => {
   useEffect(() => {
     let result = [...projects];
 
-    // Фильтрация по технологии
     if (filterTech) {
       result = result.filter((project) =>
         project.technologies.includes(filterTech)
       );
     }
 
-    // Сортировка
     if (sortOption === "date") {
       result.sort((a, b) => new Date(b.date) - new Date(a.date));
     } else if (sortOption === "name") {
@@ -29,11 +28,18 @@ const PortfolioPage = () => {
   }, [projects, sortOption, filterTech]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="min-h-screen from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="container mx-auto py-8 px-4">
         <h1 className="text-4xl font-bold mb-6 text-center">Мои проекты</h1>
 
-        {/* Блок сортировки и фильтра */}
+        <div className="text-center mb-8">
+          <Link to="/">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+              На главную
+            </button>
+          </Link>
+        </div>
+
         <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 mb-8">
           <div className="flex flex-col">
             <label htmlFor="sort" className="mb-1 text-sm font-semibold">
@@ -71,8 +77,7 @@ const PortfolioPage = () => {
           </div>
         </div>
 
-        {/* Сетка карточек */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

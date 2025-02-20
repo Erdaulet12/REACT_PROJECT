@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      className="bg-gray-800 rounded-lg p-5 shadow hover:shadow-xl transition-shadow duration-300"
-      whileHover={{ scale: 1.02 }}
+      className="bg-gray-800 rounded-lg p-5 shadow hover:shadow-xl transition-shadow duration-300 grid grid-cols-2 gap-6"
+      whileHover={{ scale: 1.05 }}
     >
-      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-      <p className="text-gray-300 mb-4">{project.description}</p>
-      <div className="flex items-center justify-between">
+      <h3 className="text-xl font-semibold mb-2 col-span-2">{project.title}</h3>
+      <p className="text-gray-300 mb-4 col-span-2">{project.description}</p>
+      <div className="flex items-center justify-between col-span-2 grid grid-cols-2 gap-6">
         <a
           href={project.github}
           target="_blank"
