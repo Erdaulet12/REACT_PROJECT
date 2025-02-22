@@ -1,70 +1,76 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Container, Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
 import PortfolioPage from "./components/PortfolioPage";
 import ProjectDetailPage from "./components/ProjectDetailPage";
-import "./App.css";
 
 const HomePage = () => (
   <motion.div
-    className="home-page"
+    className="animate-fadeIn"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
   >
-    <Container maxWidth="sm" className="container">
-      <Box className="header">
-        <Typography variant="h3" gutterBottom>
-          Меня зовут Ердаулет.
-        </Typography>
-        <Typography variant="body1" paragraph>
+    <div className="max-w-sm mx-auto text-center">
+      <div className="bg-[#007bff] text-white p-10 rounded-[15px]">
+        <h1 className="m-0 text-[2.5em]">Меня зовут Ердаулет.</h1>
+        <p className="text-[1.2em]">
           Мобильный разработчик и немножечко frontend.
-        </Typography>
-        <Typography variant="body2" paragraph>
+        </p>
+        <p className="text-[1.2em]">
           Это мое портфолио. Здесь будут показаны 4 проекта.
-        </Typography>
-      </Box>
+        </p>
+      </div>
 
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about">Обо мне</Link>
+      <nav className="mt-4">
+        <ul className="list-none p-0 text-center">
+          <li className="inline mx-[10px]">
+            <Link
+              to="/about"
+              className="text-[#5ddb41] no-underline text-[1.2em] hover:underline animate-fadeBlink"
+            >
+              Обо мне
+            </Link>
           </li>
-          <li>
-            <Link to="/projects">Проекты</Link>
+          <li className="inline mx-[10px]">
+            <Link
+              to="/projects"
+              className="text-[#5ddb41] no-underline text-[1.2em] hover:underline animate-fadeBlink"
+            >
+              Проекты
+            </Link>
           </li>
         </ul>
       </nav>
-    </Container>
+    </div>
   </motion.div>
 );
 
 const AboutPage = () => (
   <motion.div
-    className="page"
+    className="p-5 text-center animate-fadeIn"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
   >
-    <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom>
-        Обо мне
-      </Typography>
-      <Typography variant="body1">Краткая информация о себе...</Typography>
-    </Container>
+    <div className="max-w-sm mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Обо мне</h1>
+      <p>Краткая информация о себе...</p>
+    </div>
   </motion.div>
 );
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<PortfolioPage />} />
-        <Route path="/projects/:id" element={<ProjectDetailPage />} />
-      </Routes>
-    </Router>
+    <div className="h-screen w-screen bg-[#253b51] flex justify-center items-center font-sans">
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<PortfolioPage />} />
+          <Route path="/projects/:id" element={<ProjectDetailPage />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

@@ -18,12 +18,8 @@ const ProjectDetailPage = () => {
   return (
     <div className="min-h-screen from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="container mx-auto py-8 px-4">
-        {/* Карточка с деталями проекта */}
         <div className="max-w-2xl mx-auto bg-gray-800 rounded-lg shadow p-6">
-          {/* Заголовок */}
           <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-
-          {/* Картинка проекта (если есть) */}
           {project.image && (
             <div className="mb-4">
               <img
@@ -33,22 +29,14 @@ const ProjectDetailPage = () => {
               />
             </div>
           )}
-
-          {/* Описание */}
           <p className="mb-4">{project.description}</p>
-
-          {/* Технологии */}
           <p className="mb-4">
             <strong>Используемые технологии:</strong>{" "}
             {project.technologies.join(", ")}
           </p>
-
-          {/* Дата */}
           <p className="mb-4">
             <strong>Дата:</strong> {project.date}
           </p>
-
-          {/* Ссылка на GitHub */}
           <a
             href={project.github}
             target="_blank"
@@ -57,8 +45,6 @@ const ProjectDetailPage = () => {
           >
             Посмотреть на GitHub
           </a>
-
-          {/* Кнопка "Назад" */}
           <div className="mt-4">
             <Link to="/projects">
               <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
