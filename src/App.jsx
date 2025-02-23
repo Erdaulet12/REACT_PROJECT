@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PortfolioPage from "./components/PortfolioPage";
 import ProjectDetailPage from "./components/ProjectDetailPage";
+import AboutPage from "./About";
+import ContactsPage from "./Contacts";
 
 const HomePage = () => (
   <motion.div
@@ -45,20 +47,6 @@ const HomePage = () => (
   </motion.div>
 );
 
-const AboutPage = () => (
-  <motion.div
-    className="p-5 text-center animate-fadeIn"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
-    <div className="max-w-sm mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Обо мне</h1>
-      <p>Краткая информация о себе...</p>
-    </div>
-  </motion.div>
-);
-
 const App = () => {
   return (
     <div className="h-screen w-screen bg-[#253b51] flex justify-center items-center font-sans">
@@ -66,6 +54,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactsPage />} />{" "}
           <Route path="/projects" element={<PortfolioPage />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
         </Routes>
