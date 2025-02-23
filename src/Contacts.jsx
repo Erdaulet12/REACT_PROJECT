@@ -125,28 +125,28 @@ const ContactsPage = () => {
           <p className="mb-2">Следите за мной в социальных сетях:</p>
           <div className="flex justify-center space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://github.com/Erdaulet12"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
-              Facebook
+              GIT
             </a>
             <a
-              href="https://twitter.com"
+              href="https://vk.com/erya12"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Twitter
+              VK
             </a>
             <a
-              href="https://linkedin.com"
+              href="mailto:erdauletakilzhan83@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-300 hover:underline"
             >
-              LinkedIn
+              Почта
             </a>
           </div>
         </div>

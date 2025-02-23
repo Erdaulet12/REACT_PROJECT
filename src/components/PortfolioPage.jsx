@@ -68,11 +68,11 @@ const PortfolioPage = () => {
               className="bg-gray-800 border border-gray-700 rounded py-2 px-3 text-white focus:outline-none"
             >
               <option value="">Все</option>
-              <option value="React">React</option>
-              <option value="Redux">Redux</option>
-              <option value="Tailwind">Tailwind</option>
-              <option value="Material UI">Material UI</option>
-              <option value="Chakra UI">Chakra UI</option>
+              <option value="Django">Django</option>
+              <option value="HTML">HTML</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="CSS">CSS</option>
+              <option value="Python">Python</option>
             </select>
           </div>
         </div>

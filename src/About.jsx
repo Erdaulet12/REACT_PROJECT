@@ -35,12 +35,13 @@ const AboutPage = () => {
       >
         <h2 className="text-2xl font-semibold mb-4">Навыки</h2>
         <ul className="list-disc ml-6 text-gray-300 space-y-2">
-          <li>React (Hooks, Redux, Router)</li>
-          <li>React Native (iOS/Android)</li>
-          <li>Tailwind CSS / Material UI</li>
-          <li>JavaScript (ES6+), TypeScript</li>
-          <li>REST API, GraphQL</li>
-          <li>Git, GitHub, CI/CD</li>
+          <li>Django</li>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git</li>
+          <li>SQL</li>
         </ul>
       </section>
 
@@ -51,17 +52,16 @@ const AboutPage = () => {
         <h2 className="text-2xl font-semibold mb-4">Образование</h2>
         <div className="text-gray-300 space-y-4">
           <div>
-            <h3 className="text-xl font-bold">Университет X</h3>
-            <p className="text-sm text-gray-400">2018 - 2022</p>
-            <p>Бакалавр, специальность «Информатика»</p>
+            <h3 className="text-xl font-bold">
+              Инновационный, технический колледж г. Алматы
+            </h3>
+            <p className="text-sm text-gray-400">2023 - 2025</p>
+            <p>Второй курс. Разработчик Программного Обеспечения</p>
           </div>
           <div>
-            <h3 className="text-xl font-bold">Онлайн-курсы / Сертификаты</h3>
+            <h3 className="text-xl font-bold">Академия ШАГ</h3>
             <p className="text-sm text-gray-400">2022 - настоящее время</p>
-            <p>
-              React, React Native, Backend, DevOps — постоянно обучаюсь новым
-              технологиям
-            </p>
+            <p>RPO 232.2</p>
           </div>
         </div>
       </section>
